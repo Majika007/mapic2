@@ -20,6 +20,8 @@ MaPic is an advanced image viewer designed for both casual browsing and professi
 - Supports imageview orientation (landscape/portrait)
 - Automatically loads all images from the folder where MaPic2 was launched. Open folder can change..
 
+![Screenshot1](MaPic_cover.png)
+
 ## Usage
 1. Launch MaPic:
 ```
@@ -35,6 +37,8 @@ python Mapic2.py
    - Orientation-aware display (landscape and portrait supported).
 5. View AI metadata:
    - Metadata is displayed under each image, including prompts, Checkpoints, LoRAs, seed, step, sampler, scheduler and cfg parameters.
+
+![Screenshot1](MaPic2_cover.png)
 
 ## Installation & Running
 1. Install recommended Python 3.11 (higher not tested).
