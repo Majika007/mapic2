@@ -1,0 +1,120 @@
+# --- HTML/CSS stílus definíció ---
+STYLE_LIGHT = """
+<style>
+.key1 { font-weight: bold; color: green;}
+"""
+
+STYLE_DARK = """
+<style>
+"""
+
+def decode_surrogate_pair(txt):
+        
+def decode_surrogates(txt):
+    
+# ---------- Prompt extract (robosztusabb) ----------
+def extract_from_usercomment(raw_uc):
+        
+def extract_prompts_jpg(image_path):
+        
+def extract_params_png(text):
+        
+def extract_prompts_png(image_path):
+
+def extract_prompts(fname):
+
+# ---------- Main viewer ----------
+class ImageViewer(QWidget): 
+    def __init__(self):
+        super().__init__()
+        self.dark_mode = False
+        main_layout = QVBoxLayout(self)
+        # kezdő arányok
+        self.splitter.setSizes([700, 150])
+        main_layout.addWidget(self.splitter)
+
+        # gombok + toggle
+        btn_layout = QHBoxLayout()
+
+        # Dark mode toggle button (10% width)
+        self.btn_toggle_theme = QPushButton("☯")
+        self.btn_toggle_theme.clicked.connect(self.toggle_theme)
+        btn_layout.addWidget(self.btn_toggle_theme)
+        
+        self.btn_open = QPushButton("Open folder")
+        self.btn_open.clicked.connect(self.open_folder)
+        btn_layout.addWidget(self.btn_open)
+
+        self.btn_prev = QPushButton("◀ Prev")
+
+    def load_current_folder(self):
+
+    # ---------- Save Metadata ----------
+    def save_meta(self):
+
+    # mappa betöltése
+    def open_folder(self):
+
+    # segédfüggvény: biztonságos skálázás a cache-elt pixmapből
+    def _update_image_label(self):
+
+    # kép megjelenítése + meta
+    def show_image(self, fname):
+...
+        meta_info = f"""
+        {self.get_style()}
+        <div class="center">{os.path.basename(fname)}</div><br>
+        <span class="key1">✅ Prompt:</span> {pos}<br>
+        <span class="key2">🚫 Negative Prompt:</span> {neg}<br>
+        <span class="key1">📦 Checkpoint: </span><span class="key5">{result[2]}</span><br>
+        <span class="key3">🔁 Sampler:</span> {result[3]} &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="key3">📈 Scheduler:</span> {result[4]} &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="key3">📏 Steps:</span> {result[5]}<br>
+        <span class="key3">🎯 CFG scale:</span> {result[6]} &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="key3">🎲 Seed:</span> {result[7]} &nbsp;&nbsp;&nbsp;&nbsp;
+        <!--<span class="key">🌀 Denoise:</span> {result[8]}<br>
+        <span class="key">🧠 VAE:</span> {result[9]}<br>-->
+        <span class="key">✨ LoRA:</span> {result[10]}
+        """
+
+        # HTML kiírás a QTextBrowser-be
+        self.meta_text.setHtml(meta_info)
+
+    def get_style(self):
+        return STYLE_DARK if self.dark_mode else STYLE_LIGHT
+
+def toggle_theme(self):
+    if self.dark_mode:
+        # váltás világosra
+        self.dark_mode = False
+    else:
+        # váltás sötétre
+        self.dark_mode = True
+
+    # újratöltjük az aktuális képet a helyes stílussal
+    if self.image_files:
+        self.show_image(self.image_files[self.current_index])
+
+    # következő/előző
+    def show_next(self):
+
+    def show_prev(self):
+
+    # orientáció váltás - megőrizzük az arányokat, majd újrakalkuláljuk új tengelyhez
+    def toggle_orientation(self):
+
+    def _apply_new_sizes(self, ratios):
+
+    # ablak méretezés -> csak újraskálázunk a cache-elt pixmapből
+    def resizeEvent(self, event):
+
+    # billentyűzet: jobb/left/ up/down
+    def keyPressEvent(self, event):
+
+# ---------- run ----------
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    w = ImageViewer()
+    w.resize(1000, 850)
+    w.show()
+    sys.exit(app.exec())
