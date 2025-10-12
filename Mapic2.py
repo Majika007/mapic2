@@ -707,12 +707,6 @@ class ImageViewer(QWidget):
         # számoljuk, hány fér el vízszintesen
         cols = max(1, container_width // (thumb_w + spacing))
         
-        debug_log(" Cols - ", cols)
-        debug_log(" container_width - ", container_width)
-        debug_log(" spacing - ", spacing)
-#        debug_log(" Cols - ", cols)
-#        debug_log(" Cols - ", cols)
-        # clear existing grid widgets
         for i in reversed(range(self.thumb_grid.count())):
             widget_item = self.thumb_grid.itemAt(i)
             if widget_item:
