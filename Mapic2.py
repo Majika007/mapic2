@@ -662,6 +662,18 @@ class ImageViewer(QWidget):
 
         QTimer.singleShot(20, self._update_image_label)
         
+    def open_folder_and_select(self, fname):
+        folder = os.path.dirname(fname)
+        exts = (".png", ".jpg", ".jpeg", ".webp")
+        self.image_files = sorted([
+            os.path.join(folder, f)
+            for f in os.listdir(folder)
+            if f.lower().endswith(exts)
+        ])
+        # kiválasztott kép indexe
+        self.current_index = self.image_files.index(fname)
+        self.show_image(self.image_files[self.current_index])
+
 
     # ---------------- helper: get a thumbnail (with cache) ----------------
     
@@ -954,5 +966,9 @@ if __name__ == "__main__":
     app.setWindowIcon(QIcon("MaPic.ico"))
     w.setWindowIcon(QIcon("MaPic.ico"))
     w.resize(1000, 850)
+    if len(sys.argv) > 1:
+        debug_log("Path -------- ", sys.argv)
+        fname = os.path.abspath(sys.argv[1])
+        w.open_folder_and_select(fname)
     w.show()
     sys.exit(app.exec())
