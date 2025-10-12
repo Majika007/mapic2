@@ -1,0 +1,4 @@
+Szuper. Akkor kezdjük átszervezni a dolgokat, és az új fejlesztésre koncentrálni:
+Lora.
+Sok esetben több LoRA van használva egy képhez, így tömb-ként kell kiolvasnunk.
+Ez a megjelenítésben is változtatni fog ugye - a Lora-kat fel kell sorolni > szerintem egymás alá...
