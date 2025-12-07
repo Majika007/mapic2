@@ -19,13 +19,14 @@ MaPic is an advanced image viewer designed for both casual browsing and professi
 - Save metadata to TXT files
 - Supports imageview orientation (landscape/portrait)
 - Automatically loads all images from the folder where MaPic2 was launched. Open folder can change..
+- Copy-to-clipboard icons for prompts and seed (easy-copy)
 
 ![Screenshot1](MaPic_cover.png)
 
 ## Usage
 1. Launch MaPic:
 ```
-python Mapic2.py
+python Mapic2.2.py
 ```
 2. Open a folder of images:
    - Click the **Open Folder** button in the interface.
@@ -38,7 +39,7 @@ python Mapic2.py
 5. View AI metadata:
    - Metadata is displayed under each image, including prompts, Checkpoints, LoRAs, seed, step, sampler, scheduler and cfg parameters.
 
-![Screenshot1](MaPic2_cover.png)
+![Screenshot1](MaPic2.2_copied.png)
 
 ## Installation & Running
 1. Install recommended Python 3.11 (higher not tested).
