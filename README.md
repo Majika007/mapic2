@@ -1,6 +1,6 @@
 # MaPic – Image Viewer and AI Metadata Reader
 
-**Note**: MaPic2 has moved to a new location and continues as MaPic, now without a version number. The program now features automatic update checks, always suggesting the latest version. Although the program continues under the name MaPic, the Release page and the About window will still indicate version 2.4.
+**Note**: **MaPic2 has moved to a new location and continues as MaPic**, now without a version number. The program now features automatic update checks, always suggesting the latest version. Although the program continues under the name MaPic, the Release page and the About window will still indicate version 2.4.
 https://github.com/Majika007/mapic
 
 
